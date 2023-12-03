@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="avaGroup.png">
+    <title>mod's latterday | Flooder by 7sg</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .video-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .video-container {
+            width: 50vw; /* Изменено на ширину окна просмотра */
+            height: 80vw; /* Высота равна ширине, чтобы сделать видео квадратным */
+            max-width: 800px;
+            max-height: 80vh; /* Ограничение по вертикали */
+        }
+
+        .video-button {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+            width: 70vw; /* Изменено на ширину окна просмотра */
+            max-width: 400px;
+            height: 70vw; /* Высота равна ширине, чтобы сделать видео квадратным */
+            max-height: 400px;
+        }
+
+        .video-button:hover {
+            background-color: #ccc;
+        }
+
+        .video-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Добавлено, чтобы изображение вписывалось в блок */
+            border-radius: 5px;
+        }
+
+        .button-content {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #000000;
+            background-color: rgb(255, 44, 44)
+        }
+
+        .button-content h3 {
+            margin: 0;
+        }
+
+        .watch-button {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .watch-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Video for flooder by 7sg</h1>
+    </header>
+
+    <div id="content">
+        <div class="video-button" onclick="showVideo('UZirqER9C-0')">
+            <img src="https://i.pinimg.com/564x/85/5c/d6/855cd60273bfd20337ba653f1c029761.jpg" alt="Video Thumbnail">
+            <div class="button-content">
+                <h3>Видео обзор флудера</h3>
+            </div>
+        </div>
+
+        <div class="video-button" onclick="showVideo('ВАШ-YouTube-Video-ID-2')">
+            <img src="https://i.pinimg.com/564x/75/60/99/7560992226f12bd04f08a1007b027086.jpg" alt="Video Thumbnail">
+            <div class="button-content">
+                <h3>Ну тут кароч типо жесткий перекапт</h3>
+            </div>
+        </div>
+
+        <div class="video-button" onclick="showVideo('ВАШ-YouTube-Video-ID-3')">
+            <img src="https://i.pinimg.com/564x/83/4a/2c/834a2c244395385843e73308567a8833.jpg" alt="Video Thumbnail">
+            <div class="button-content">
+                <h3>Ну и тут должно быть видео перекапта</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-popup" id="videoPopup" onclick="closeVideo()">
+        <div class="video-container">
+            <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        function showVideo(videoId) {
+            var videoPopup = document.getElementById('videoPopup');
+            videoPopup.style.display = 'flex';
+            var videoFrame = document.querySelector('.video-container iframe');
+            videoFrame.src = 'https://www.youtube.com/embed/' + videoId;
+        }
+
+        function closeVideo() {
+            var videoPopup = document.getElementById('videoPopup');
+            videoPopup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
