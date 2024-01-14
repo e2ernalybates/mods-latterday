@@ -14,7 +14,12 @@ body {
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 50px;
-    max-width: 80%;
+    max-width: 50%;
+    display: flex;
+}
+
+.content {
+    flex: 1;
 }
 
 .download-link {
@@ -23,4 +28,9 @@ body {
 
 img {
     cursor: pointer;
+    max-width: 50%;
+}
+
+.video-menu {
+    margin-left: 20px;
 }
