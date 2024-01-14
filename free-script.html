@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="avaGroup.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>mod's latterday | Бесплатные скрипты</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .video-button {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .video-button:hover {
+            transform: scale(1.05);
+        }
+
+        .video-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .button-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #000000;
+        }
+
+        .button-content h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .video-button:hover .button-content h3 {
+            opacity: 1;
+        }
+
+        .watch-button {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .watch-button:hover {
+            background-color: #555;
+        }
+
+        #support-author {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .support-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .support-button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .support-button:active {
+            transform: scale(0.9);
+            transition: transform 0.1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #support-message {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Бесплатные скрипты от 7SG</h1>
+        <div id="support-author">
+            <p>Скрипты предоставляются бесплатно. Если вы хотите поддержать автора финансово, нажмите кнопку ниже:</p>
+            <a href="donate.html" target="_blank">
+                <button onclick="showSupportMessage()" class="support-button">Поддержать автора</button>
+            </a>
+            <p id="support-message" style="display:none;">Спасибо за вашу поддержку!</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <div class="video-button">
+            <a href="download-script/autopiar.html">
+                <img src="https://i.imgur.com/OJRgV85.png">
+                <div class="button-content">
+                    <h3 class="animate__animated animate__fadeIn"></h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="video-button">
+            <a href="download-script/autopiar.html">
+                <img src="https://i.imgur.com/OJRgV85.png">
+                <div class="button-content">
+                    <h3 class="animate__animated animate__fadeIn"></h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="video-button">
+            <a href="download-script/autopiar.html">
+                <img src="https://i.imgur.com/OJRgV85.png">
+                <div class="button-content">
+                    <h3 class="animate__animated animate__fadeIn"></h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showSupportMessage() {
+            document.getElementById("support-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>

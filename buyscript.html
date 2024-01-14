@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="avaGroup.png">
-    <title>mods-latterday | Заказ скрипта</title>
     <link rel="stylesheet" href="css/style2.css">
+    <title>mods-latterday | Заказ скрипта</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="button" type="button" value="Кнопка" onClick='location.href="https://vk.me/greenyour"'>
-           <div class="icon">
-              <img src="brand-vk.svg" alt="vk">
-           </div>
-           <span>ВКонтакте</span>
+        <div class="button" onclick="navigateTo('https://vk.me/greenyour')">
+            <div class="icon" style="background-color: #4267B2;">
+                <img src="brand-vk.svg" alt="vk">
+            </div>
+            <span>ВКонтакте</span>
         </div>
-        <div class="button" type="button" value="Кнопка" onClick='location.href="https://telegram.me/DanBOTinok"'>
-           <div class="icon">
-              <img src="brand-telegram.svg" alt="tg">
-           </div>
-           <span>Telegram</span>
+        <div class="button" onclick="navigateTo('https://telegram.me/DanBOTinok')">
+            <div class="icon" style="background-color: #1DA1F2;">
+                <img src="brand-telegram.svg" alt="tg">
+            </div>
+            <span>Telegram</span>
         </div>
-   </div>
+    </div>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
