@@ -7,8 +7,8 @@
 
 body {
     min-height: 100vh;
+    overflow: hidden;
 }
-
 
 header {
     position: absolute;
@@ -26,6 +26,11 @@ header {
     font-size: 2em;
     color: rgb(255, 255, 255);
     user-select: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+    display: flex;
 }
 
 .navigation a {
@@ -64,6 +69,12 @@ header {
     opacity: 1;
 }
 
+.burger-menu {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
 .parallax {
     position: relative;
     display: flex;
@@ -80,15 +91,69 @@ header {
     position: absolute;
     font-size: 5em;
     color: #ffffff;
-
 }
 
 #text2 {
     position: relative;
-    top: 450px; left: 5px;
+    top: 450px;
+    right: 500px;
     color: #ffffff;
+    white-space: nowrap; /* Добавлено свойство для предотвращения переноса строки */
 }
 
 .above-text-image {
-    transform: translateX(70px)
+    transform: translateX(150px)
+}
+
+.burger-menu {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 70px;
+}
+
+@media only screen and (max-width: 768px) and (max-width: 1388px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .logo {
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+        user-select: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+        left: 50px;
+    }
+
+    .above-text-image {
+        transform: translateX(146px)
+    }
+
+    .textmodslatterday {
+        transform: translateY(-70px)
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 99;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
 }
